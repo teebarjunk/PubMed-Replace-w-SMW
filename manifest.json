@@ -1,0 +1,19 @@
+{
+"name":"PubMed extra data",
+"description":"Beep Boop",
+"version":"1",
+"manifest_version":2,
+"browser_action": {
+    "default_icon": "icon.png"
+  },
+"content_scripts": [
+    {
+      "matches": ["http://www.ncbi.nlm.nih.gov/pubmed/*","https://www.ncbi.nlm.nih.gov/pubmed/*"],
+      "js": ["myscript.js"],
+      "run_at": "document_start"
+    }
+  ],
+ "permissions": [
+    "http://localhost/w/api.php", "https://localhost/w/api.php", "http://www.ncbi.nlm.nih.gov/pubmed/*","https://www.ncbi.nlm.nih.gov/pubmed/*"
+  ]
+}
